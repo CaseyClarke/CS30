@@ -2,7 +2,7 @@ import java.util.*;
 
 public class As1_NetworkMain {
     public static void main(String[] args) {
-        ArrayList <As1_Message> allMessages = new ArrayList<As1_Message>();
+        ArrayList <As1_Message> allMessages = new ArrayList<>();
         Scanner input = new Scanner(System.in);
 
         allMessages.add(new As1_Message("Client3: repeated login failure"));
@@ -34,7 +34,7 @@ public class As1_NetworkMain {
                     System.out.println(message);
                 }
             } else if (option == 3) {
-                System.out.println("What keyword would you like to search for");
+                System.out.println("What keyword would you like to search for?");
                 String keyword = input.nextLine();
                 for (As1_Message message : allMessages) {
                     if(message.scanWarning(keyword)) {
