@@ -52,7 +52,15 @@ public class GUI_As1_Calculator {
         MODButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(num2.getText().equals("0") || num2.getText().equals("")) {
+                double temp = -1.0;
+
+                try {
+                    temp = Double.parseDouble(num2.getText());
+                } catch (Exception error) {
+                    System.out.println(error);
+                }
+
+                if(temp == 0.0 || num2.getText().equals("")) {
                     result.setText("DIVIDE BY ZERO ERROR");
                 } else {
                     result.setText( Double.toString(Double.parseDouble(num1.getText()) % Double.parseDouble(num2.getText()) ));
@@ -77,13 +85,20 @@ public class GUI_As1_Calculator {
         DIVIDEButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(num2.getText().equals("0") || num2.getText().equals("")) {
+                double temp = -1.0;
+
+                try {
+                    temp = Double.parseDouble(num2.getText());
+                } catch (Exception error) {
+                    System.out.println(error);
+                }
+
+                if(temp == 0.0 || num2.getText().equals("")) {
                     result.setText("DIVIDE BY ZERO ERROR");
                 } else {
                     result.setText( Double.toString(Double.parseDouble(num1.getText()) / Double.parseDouble(num2.getText()) ));
                     pastCalcs.append(num1.getText() + " / " + num2.getText() + " = " + result.getText() + '\n');
                 }
-
             }
         });
         negativeButton.addActionListener(new ActionListener() {
