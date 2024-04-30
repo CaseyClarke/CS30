@@ -16,7 +16,7 @@ public class As1_Message {
 
     boolean scanWarning (String keyword) {
         String[] warningParts = warning.split(" ");
-        return Arrays.asList(warningParts).contains(keyword);
+        return Arrays.asList(warningParts).contains(keyword) || keyword.equals(warning);
     }
 
     @Override public String toString() {
