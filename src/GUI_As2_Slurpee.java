@@ -19,7 +19,7 @@ public class GUI_As2_Slurpee {
             sizes.put("Small", 1.25);
             sizes.put("Medium", 1.50);
             sizes.put("Large", 1.75);
-            sizes.put("Extra Large", 2.00);
+            sizes.put("Mega Super Duper Large", 2.00);
         }
 
         flavorBox.setModel(new javax.swing.DefaultComboBoxModel(flavors));
