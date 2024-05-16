@@ -3,14 +3,14 @@
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="330" y="20" width="618" height="385"/>
+      <xy x="330" y="20" width="744" height="385"/>
     </constraints>
     <properties>
       <background color="-9539334"/>
     </properties>
     <border type="none"/>
     <children>
-      <grid id="713de" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="713de" layout-manager="GridLayoutManager" row-count="5" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -22,7 +22,7 @@
         <children>
           <component id="52b7e" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Dialog" size="48"/>
@@ -31,7 +31,7 @@
           </component>
           <component id="d8803" class="javax.swing.JLabel" binding="slurpee" custom-create="true">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value=""/>
@@ -45,12 +45,6 @@
               <text value="Choose your flavor:"/>
             </properties>
           </component>
-          <component id="f487e" class="javax.swing.JComboBox" binding="flavorBox">
-            <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-          </component>
           <component id="94a04" class="javax.swing.JLabel">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -59,15 +53,9 @@
               <text value="Choose your size:"/>
             </properties>
           </component>
-          <component id="3fd6a" class="javax.swing.JComboBox" binding="sizeBox">
-            <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-          </component>
           <scrollpane id="30e0a">
             <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="5" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="5" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
             <border type="none"/>
@@ -95,6 +83,46 @@
               <text value="Purchase"/>
             </properties>
           </component>
+          <component id="4dc31" class="javax.swing.JSlider" binding="slider1" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <maximum value="2"/>
+            </properties>
+          </component>
+          <component id="1cff9" class="javax.swing.JRadioButton" binding="Small">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Small"/>
+            </properties>
+          </component>
+          <component id="aea9f" class="javax.swing.JRadioButton" binding="largeRadioButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Large"/>
+            </properties>
+          </component>
+          <component id="ae420" class="javax.swing.JRadioButton" binding="EXTRASTUPIDLYFUCKINGLARGERadioButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="EXTRA STUPIDLY FUCKING LARGE OH AND I HATE JRADIOBUTTONS"/>
+            </properties>
+          </component>
+          <component id="a0649" class="javax.swing.JRadioButton" binding="mediumRadioButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Medium"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <hspacer id="8aaaa">
@@ -119,4 +147,12 @@
       </vspacer>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="buttonGroup1">
+      <member id="1cff9"/>
+      <member id="a0649"/>
+      <member id="aea9f"/>
+      <member id="ae420"/>
+    </group>
+  </buttonGroups>
 </form>

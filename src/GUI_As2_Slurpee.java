@@ -7,28 +7,30 @@ import java.util.*;
 public class GUI_As2_Slurpee {
     private JPanel mainPanel;
     private JLabel slurpee;
-    private JComboBox flavorBox;
     private JComboBox sizeBox;
     private JButton purchaseButton;
     private JTextArea output;
+    private JSlider slider1;
+    private JRadioButton Small;
+    private JRadioButton largeRadioButton;
+    private JRadioButton EXTRASTUPIDLYFUCKINGLARGERadioButton;
+    private JRadioButton mediumRadioButton;
 
     public GUI_As2_Slurpee() {
-        HashMap<String, Double> sizes = new HashMap<String, Double>();
         String[] flavors = {"Cream soda", "Crush", "Orange", "Mystery"};
-        {
-            sizes.put("Small", 1.25);
-            sizes.put("Medium", 1.50);
-            sizes.put("Large", 1.75);
-            sizes.put("Mega Super Duper Large", 2.00);
-        }
-
-        flavorBox.setModel(new javax.swing.DefaultComboBoxModel(flavors));
-        sizeBox.setModel(new javax.swing.DefaultComboBoxModel(sizes.keySet().toArray(new String[0])));
 
         purchaseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                output.append(sizeBox.getSelectedItem() + " " + flavorBox.getSelectedItem() + " " + sizes.get(sizeBox.getSelectedItem())  +  "$ \n");
+                if(Small.isSelected()) {
+                    output.append("Small " + flavors[slider1.getValue()] + " " + 1.25 +  "$ \n");
+                } else if(mediumRadioButton.isSelected()) {
+                    output.append("Medium " + flavors[slider1.getValue()] + " " + 1.5 +  "$ \n");
+                } else if(largeRadioButton.isSelected()) {
+                    output.append("Large " + flavors[slider1.getValue()] + " " + 1.75 +  "$ \n");
+                } else {
+                    output.append("EXTRA SUPER DUPER FUCK YOU LARGE " + flavors[slider1.getValue()] + " " + 2.00 +  "$ \n");
+                }
             }
         });
     }
